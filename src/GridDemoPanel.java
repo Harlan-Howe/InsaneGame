@@ -140,13 +140,13 @@ public class GridDemoPanel extends JPanel implements MouseListener
 	}
 	
 	/**
-	 * A recursive method that sets the "isLive" variable of the cell in theGrid at row/col to false, and checks
+	 * A recursive method that (maybe) sets the "isLive" variable of the cell in theGrid at row/col to false, and checks
 	 *  for any neighbors that are currently alive and have the same color and tells them to do the same.
 	 *  Returns a count of how many cells are "killed."
-	 * @param row
-	 * @param col
-	 * @param colorID
-	 * @return how many cells are removed by this method and it's children.
+	 * @param row - the row to consider
+	 * @param col - the column to consider
+	 * @param colorID - the color we are trying to remove
+	 * @return how many cells are removed by this method and its children.
 	 */
 	public int clearCellAndNeighborsOfColor(int row, int col, int colorID)
 	{
