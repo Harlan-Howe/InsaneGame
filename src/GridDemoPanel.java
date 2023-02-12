@@ -156,6 +156,8 @@ public class GridDemoPanel extends JPanel implements MouseListener
 		// combination of (row, col, colorID) lead to not wanting to continue
 		// recursing?
 
+		// To make a cell go away, tell the cell to setIsLive(false).
+
 		// suggestion: when checking your neighbors, call the recursion on all
 		//  four (N, S, E, W) regardless of their state, and let their base
 		//  cases sort out whether to return quickly.
@@ -198,7 +200,6 @@ public class GridDemoPanel extends JPanel implements MouseListener
 	// mouse was just released within about 1 pixel of where it was pressed.
 	public void mouseClicked(MouseEvent e)
 	{
-		// TODO Auto-generated method stub
 		// mouse location is at e.getX() , e.getY().
 		// if you wish to convert to the rows and columns, you can integer-divide by the cell size.
 
@@ -209,7 +210,6 @@ public class GridDemoPanel extends JPanel implements MouseListener
 	@Override
 	public void mousePressed(MouseEvent e)
 	{
-		// TODO Auto-generated method stub
 		// mouse location is at e.getX() , e.getY().
 		// if you wish to convert to the rows and columns, you can integer-divide by the cell size.
 				
@@ -218,7 +218,6 @@ public class GridDemoPanel extends JPanel implements MouseListener
 	@Override
 	public void mouseReleased(MouseEvent e)
 	{
-		// TODO Auto-generated method stub
 		// mouse location is at e.getX() , e.getY().
 		// if you wish to convert to the rows and columns, you can integer-divide by the cell size.
 		int col = e.getX()/Cell.CELL_SIZE;
@@ -230,16 +229,14 @@ public class GridDemoPanel extends JPanel implements MouseListener
 	// mouse just entered this window
 	public void mouseEntered(MouseEvent e)
 	{
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	// mouse just left this window
 	public void mouseExited(MouseEvent e)
 	{
-		// TODO Auto-generated method stub
-		
+
 	}
 	
 	
