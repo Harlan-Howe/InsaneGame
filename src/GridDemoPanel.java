@@ -120,10 +120,10 @@ public class GridDemoPanel extends JPanel implements MouseListener
 			return;
 		int clickedColorID = theGrid[row][col].getColorID();
 		System.out.println("You just clicked cell at row "+row+", col "+col+",which has color #"+clickedColorID); // temporary, so you can see what it is doing.
-		boolean foundMatch = (row>0 && theGrid[row-1][col].getColorID() == clickedColorID) ||
-							 (col>0 && theGrid[row][col-1].getColorID() == clickedColorID) ||
-							 (row<NUM_ROWS-1 && theGrid[row+1][col].getColorID() == clickedColorID)||
-							 (col<NUM_COLS-1 && theGrid[row][col+1].getColorID() == clickedColorID);
+		boolean foundMatch = (row>0 && theGrid[row-1][col].isLive() && theGrid[row-1][col].getColorID() == clickedColorID) ||
+							 (col>0 && theGrid[row][col-1].isLive() && theGrid[row][col-1].getColorID() == clickedColorID) ||
+							 (row<NUM_ROWS-1 && theGrid[row+1][col].isLive() && theGrid[row+1][col].getColorID() == clickedColorID)||
+							 (col<NUM_COLS-1 && theGrid[row][col+1].isLive() && theGrid[row][col+1].getColorID() == clickedColorID);
 		if (foundMatch)
 		{
 			System.out.println("Found a match for color id: "+clickedColorID); // temporary, so you can see what it is doing.
