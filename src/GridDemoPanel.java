@@ -128,8 +128,10 @@ public class GridDemoPanel extends JPanel implements MouseListener
 		{
 			System.out.println("Found a match for color id: "+clickedColorID); // temporary, so you can see what it is doing.
 			int count = clearCellAndNeighborsOfColor(row, col, clickedColorID);
-			// TODO: Do something meaningful with "count."
-			score++;
+			// TODO: Do something meaningful with "count" to add to the score, perhaps better than just increasing
+			//  score by one.
+			score++;  // you can do better than this!
+
 			myParent.updateScore(score); // this is how we change the score at the bottom of the window.
 		}
 		// shuffle the chips to fill the empty spots and redraw the screen.
